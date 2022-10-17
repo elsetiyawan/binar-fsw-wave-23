@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useDispatch } from "react-redux";
 import { setLogin, setLogout } from "../redux/authSlice";
+import style from '../../styles/Dashboard.module.css'
 
 const Header = () => {
   const [cookies] = useCookies(["accessToken", "userId"]);
@@ -24,7 +25,9 @@ const Header = () => {
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <Link href="/">
-            <a className="nav-link">Home</a>
+            <a className="nav-link">
+              <div className={style.yellowBackground}>Home</div>
+            </a>
           </Link>
         </li>
         <li className="nav-item">
